@@ -1,8 +1,8 @@
-const header=document.querySelector('[data-header]');
+const header=document.querySelector('[data-header]')||document.querySelector('.site-header');
 const menu=document.querySelector('.menu-btn');
 const dot=document.querySelector('.cursor-dot');
 window.addEventListener('scroll',()=>header?.classList.toggle('scrolled',scrollY>40),{passive:true});
-menu?.addEventListener('click',()=>{const open=header.classList.toggle('menu-active');document.body.classList.toggle('menu-open',open);menu.setAttribute('aria-expanded',String(open));});
+menu?.addEventListener('click',()=>{if(!header)return;const open=header.classList.toggle('menu-active');document.body.classList.toggle('menu-open',open);menu.setAttribute('aria-expanded',String(open));});
 document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{header?.classList.remove('menu-active');document.body.classList.remove('menu-open');menu?.setAttribute('aria-expanded','false')}));
 window.addEventListener('pointermove',e=>{if(dot){dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px'}},{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.14});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
