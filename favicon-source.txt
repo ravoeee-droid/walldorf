@@ -1,0 +1,1 @@
+SVG favicon is canonical at /favicon.svg. Legacy browsers can use the SVG-aware browser fallback; no binary ICO is required for this demo.
