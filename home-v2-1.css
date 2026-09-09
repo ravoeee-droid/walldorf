@@ -84,3 +84,9 @@ em{font-weight:400;color:#8c6741}
 .summary span{color:#75817b}
 .flow-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .flow-actions button,.flow-actions a{border:0;border-radius:999px;background:var(--deep);color:#fff;padding:11px 14px;font-size:.7rem;font-weight:800}
+
+/* Walterhof brand system */
+.mark{width:44px;height:44px;flex:0 0 44px;border:0;border-radius:0;position:relative;display:block;background:url('assets/walterhof-mark.svg') center/contain no-repeat}
+.mark:before,.mark:after{content:none!important;display:none!important}
+.footer .mark{filter:drop-shadow(0 2px 8px rgba(0,0,0,.12))}
+@media(max-width:900px){.mark{width:40px;height:40px;flex-basis:40px}}
