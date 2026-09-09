@@ -1,1 +1,0 @@
-The active favicon is served from /favicon.svg. The source mark is /assets/walterhof-mark.svg.
